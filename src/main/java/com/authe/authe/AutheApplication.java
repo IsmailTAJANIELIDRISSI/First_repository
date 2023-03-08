@@ -27,18 +27,18 @@ public class AutheApplication {
 	@Bean
 	CommandLineRunner start(AccountService accountService){
 		return  args -> {
-			accountService.addNewRole(new AppRole(null,"USER"));
+//			accountService.addNewRole(new AppRole(null,"USER"));
 			accountService.addNewRole(new AppRole(null,"ADMIN"));
-			accountService.addNewRole(new AppRole(null,"MANAGER"));
-			accountService.addNewUser(new AppUser(null,"user1","1234",new ArrayList<>()));
+//			accountService.addNewRole(new AppRole(null,"MANAGER"));
+//			accountService.addNewUser(new AppUser(null,"user1","1234",new ArrayList<>()));
 			accountService.addNewUser(new AppUser(null,"admin","1234",new ArrayList<>()));
-			accountService.addNewUser(new AppUser(null,"manager","1234",new ArrayList<>()));
-			accountService.addRoleToUser("user1","USER");
-			accountService.addRoleToUser("admin","USER");
+//			accountService.addNewUser(new AppUser(null,"manager","1234",new ArrayList<>()));
+//			accountService.addRoleToUser("user1","USER");
+//			accountService.addRoleToUser("admin","USER");
 			accountService.addRoleToUser("admin","ADMIN");
-			accountService.addRoleToUser("admin","MANAGER");
-			accountService.addRoleToUser("manager","MANAGER");
-			accountService.addRoleToUser("manager","user");
+//			accountService.addRoleToUser("admin","MANAGER");
+//			accountService.addRoleToUser("manager","MANAGER");
+//			accountService.addRoleToUser("manager","user");
 		};
 	};
 
