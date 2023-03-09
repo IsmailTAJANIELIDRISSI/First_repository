@@ -17,9 +17,14 @@ public class AppUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
+    @Column(name="avatar", length=767665512)
+    private String avatar;
+    private String email;
+    private String fullname;
 
     @JsonIgnore
     private String password;
+
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<AppRole> appRoles=new ArrayList<>();
 }
