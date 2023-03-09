@@ -1,9 +1,9 @@
-package com.authe.authe.services;
+package ma.veviosys.recordsmanager.services;
 
-import com.authe.authe.entities.AppRole;
-import com.authe.authe.entities.AppUser;
-import com.authe.authe.repositry.AppRoleRepository;
-import com.authe.authe.repositry.AppUserRepository;
+import ma.veviosys.recordsmanager.entities.AppRole;
+import ma.veviosys.recordsmanager.entities.AppUser;
+import ma.veviosys.recordsmanager.repositry.AppRoleRepository;
+import ma.veviosys.recordsmanager.repositry.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;

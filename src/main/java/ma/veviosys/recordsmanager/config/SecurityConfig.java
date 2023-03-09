@@ -1,14 +1,13 @@
-package com.authe.authe.config;
+package ma.veviosys.recordsmanager.config;
 
 
-import com.authe.authe.entities.AppUser;
-import com.authe.authe.filter.JwtAuthenticationFilter;
-import com.authe.authe.filter.JwtAutorizationFilter;
-import com.authe.authe.services.AccountService;
+import ma.veviosys.recordsmanager.entities.AppUser;
+import ma.veviosys.recordsmanager.filter.JwtAuthenticationFilter;
+import ma.veviosys.recordsmanager.filter.JwtAutorizationFilter;
+import ma.veviosys.recordsmanager.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -21,7 +20,6 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 ;import java.util.ArrayList;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package com.authe.authe.filter;
+package ma.veviosys.recordsmanager.filter;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

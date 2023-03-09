@@ -1,8 +1,8 @@
-package com.authe.authe;
+package ma.veviosys.recordsmanager;
 
-import com.authe.authe.entities.AppRole;
-import com.authe.authe.entities.AppUser;
-import com.authe.authe.services.AccountService;
+import ma.veviosys.recordsmanager.entities.AppRole;
+import ma.veviosys.recordsmanager.entities.AppUser;
+import ma.veviosys.recordsmanager.services.AccountService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

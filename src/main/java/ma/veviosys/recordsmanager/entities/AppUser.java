@@ -1,4 +1,4 @@
-package com.authe.authe.entities;
+package ma.veviosys.recordsmanager.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;

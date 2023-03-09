@@ -1,7 +1,7 @@
-package com.authe.authe.services;
+package ma.veviosys.recordsmanager.services;
 
-import com.authe.authe.entities.AppRole;
-import com.authe.authe.entities.AppUser;
+import ma.veviosys.recordsmanager.entities.AppRole;
+import ma.veviosys.recordsmanager.entities.AppUser;
 
 import java.util.List;
 

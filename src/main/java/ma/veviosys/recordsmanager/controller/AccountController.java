@@ -1,12 +1,12 @@
-package com.authe.authe.controller;
+package ma.veviosys.recordsmanager.controller;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.authe.authe.entities.AppRole;
-import com.authe.authe.entities.AppUser;
-import com.authe.authe.services.AccountServiceImpl;
+import ma.veviosys.recordsmanager.entities.AppRole;
+import ma.veviosys.recordsmanager.entities.AppUser;
+import ma.veviosys.recordsmanager.services.AccountServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;

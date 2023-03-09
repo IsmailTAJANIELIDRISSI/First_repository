@@ -1,6 +1,6 @@
-package com.authe.authe.repositry;
+package ma.veviosys.recordsmanager.repositry;
 
-import com.authe.authe.entities.AppRole;
+import ma.veviosys.recordsmanager.entities.AppRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AppRoleRepository extends JpaRepository<AppRole,Long> {
