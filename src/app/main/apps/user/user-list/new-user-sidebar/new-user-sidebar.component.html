@@ -1,0 +1,147 @@
+<div class="slideout-content">
+  <!-- Modal to add new user starts-->
+  <div class="modalsd modal-slide-in sdfade new-user-modal" id="modals-slide-in">
+    <div class="modal-dialog">
+      <form class="add-new-user modal-content pt-0" [formGroup]="addform" (submit)="addUser()" (ngSubmit)="(newUserForm.form.valid)"  #newUserForm="ngForm">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          (click)="toggleSidebar('new-user-sidebar')"
+        >
+          ×
+        </button>
+        <div class="modal-header mb-1">
+          <h5 class="modal-title" id="exampleModalLabel">New User</h5>
+        </div>
+        <div class="modal-body flex-grow-1">
+          <div class="form-group">
+            <label class="form-label" for="basic-icon-default-fullname">Full Name</label>
+            <input
+              type="text"
+              class="form-control dt-full-name"
+              id="basic-icon-default-fullname"
+              placeholder="John Doe"
+              name="user-fullname"
+              
+     
+              required
+              aria-label="John Doe"
+              aria-describedby="basic-icon-default-fullname2"
+              formControlName="fullname"
+            />
+            <span *ngIf="fullName.touched && fullName.invalid" class="invalid-form">
+              <small class="form-text text-danger" *ngIf="fullName.errors['required']">This field is required!</small>
+            </span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="basic-icon-default-uname">Username</label>
+            <input
+              type="text"
+              id="basic-icon-default-uname"
+              class="form-control dt-uname"
+              placeholder="Web Developer"
+              aria-label="jdoe1"
+              aria-describedby="basic-icon-default-uname2"
+              name="user-name"
+          
+              
+              required
+              formControlName="username"
+            />
+            <span *ngIf="userName.touched && userName.invalid" class="invalid-form">
+              <small class="form-text text-danger" *ngIf="userName.errors['required']">This field is required!</small>
+            </span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="basic-icon-default-uname">Password</label>
+            <input
+              type="password"
+              id="basic-icon-default-uname"
+              class="form-control dt-uname"
+              minlength="4"
+              aria-label="jdoe1"
+              aria-describedby="basic-icon-default-uname2"
+              name="pass-word"
+          
+              
+              required
+              formControlName="password"
+            />
+            <span *ngIf="password.touched && password.invalid" class="invalid-form">
+              <small class="form-text text-danger" *ngIf="password.errors['required']">This field is required!</small>
+              <small class="form-text text-danger" *ngIf="password.errors['minlength']">The minimum lenght is 4!</small>
+            </span>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="basic-icon-default-email">Email</label>
+            <input
+              type="text"
+              id="basic-icon-default-email"
+              class="form-control dt-email"
+              placeholder="john.doe@example.com"
+              aria-label="john.doe@example.com"
+              aria-describedby="basic-icon-default-email2"
+              name="user-email"
+              
+              required
+              formControlName="email"
+            />
+            <span *ngIf="Email.touched && Email.invalid" class="invalid-form">
+              <small class="form-text text-danger" *ngIf="Email.errors['required']">This field is required!</small>
+              <small class="form-text text-danger" *ngIf="Email.errors['email']">This field should be an email!</small>
+            </span>
+            <small class="form-text text-muted"> You can use letters, numbers & periods </small>
+          </div>
+          <div class="form-group" >
+            <label class="form-label" for="user-role">User Role</label>
+            <select id="user-role" formControlName="role"class="form-control">
+              <option value="ADMIN">Admin</option>
+              <option value="USER">User</option>
+              <!-- <option value="maintainer">Maintainer</option>
+              <option value="author">Author</option>
+              <option value="admin">Admin</option> -->
+            </select>
+            <span *ngIf="role.touched && role.invalid" class="invalid-form">
+              <small class="form-text text-danger" *ngIf="role.errors['required']">This field is required!</small>
+            </span>
+          </div>
+          <div>
+          <fieldset class="form-group">
+            <label for="file-upload-single">Avatar:</label>
+            <div class="custom-file">
+              <input
+                type="file"
+                class="custom-file-input"
+               formControlName="avatar"
+               required
+               (change)="onSelectNewFile($event.target?.files)"
+                id="file-upload-single"
+              />
+              <label class="custom-file-label">Choose image</label>
+            </div>
+     
+            
+<span *ngIf="avatar.touched && avatar.invalid" class="invalid-form">
+            <small class="form-text text-danger" *ngIf="avatar.errors['required']">This field is required!</small>
+              </span>
+          </fieldset>
+          
+          </div>
+          <button type="submit" class="btn btn-primary mr-1" [disabled]="addform.invalid" (click)="submit(newUserForm)" rippleEffect>Submit</button>
+          <button
+            type="reset"
+            class="btn btn-outline-secondary"
+            (click)="toggleSidebar('new-user-sidebar')"
+            rippleEffect
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Modal to add new user Ends-->
+</div>

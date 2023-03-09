@@ -16,7 +16,8 @@ export class CoreSidebarService {
    */
   getSidebarRegistry(key): CoreSidebarComponent {
     // Check if the sidebar registered
-
+    // console.log("hhhhhh");
+    
     if (!this._registry[key]) {
       console.warn(`The sidebar with the key '${key}' doesn't exist in the registry.`);
       return;

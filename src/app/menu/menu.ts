@@ -17,4 +17,14 @@ export const menu: CoreMenu[] = [
     icon: 'file',
     url: 'sample'
   }
+  ,
+  {
+    id: 'users',
+    title: 'Users',
+    translate: 'Users',
+    type: 'item',
+    icon: 'database',
+    url: 'users/user-list'
+  }
+  
 ]

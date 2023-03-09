@@ -1,13 +1,20 @@
+
+
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreCommonModule } from '@core/common.module';
 
 import { ContentHeaderModule } from 'app/layout/components/content-header/content-header.module';
 
 import { SampleComponent } from './sample.component';
 import { HomeComponent } from './home.component';
+import { CoreSidebarModule } from '@core/components/core-sidebar/core-sidebar.module';
+import { UsersComponent } from './users/users.component';
+import { EdituserComponent } from './edituser/edituser.component';
+import { AdduserComponent } from './adduser/adduser.component';
+
 
 const routes = [
   {
@@ -23,8 +30,8 @@ const routes = [
 ];
 
 @NgModule({
-  declarations: [SampleComponent, HomeComponent],
-  imports: [RouterModule.forChild(routes), ContentHeaderModule, TranslateModule, CoreCommonModule],
+  declarations: [SampleComponent, HomeComponent, UsersComponent, EdituserComponent ],
+  imports: [RouterModule.forChild(routes), ContentHeaderModule,NgbModule, TranslateModule, CoreCommonModule,    CoreSidebarModule,],
   exports: [SampleComponent, HomeComponent]
 })
 export class SampleModule {}
